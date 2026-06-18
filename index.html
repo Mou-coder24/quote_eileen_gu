@@ -2,58 +2,56 @@
 <html lang="en">
 <head>
     <style>
-        /* Perfectly flattens the canvas to prevent any edge gaps */
-        html, body {
-            margin: 0;
-            padding: 0;
-            background-color: transparent;
+        body {
+            margin: 0; padding: 0; background: transparent;
+            display: flex; justify-content: center; align-items: flex-start;
+        }
+        
+        .quote-container {
             width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
+            color: #64473a; /* Deep Walnut */
+            text-align: left;
+            padding: 30px 10px;
         }
-        /* Clean, flat Walnut Frame with zero shadows */
-        .outer-frame {
-            background-color: #a47552; /* Muted Dark Walnut tone */
-            border-radius: 12px;
-            padding: 6px;
-            width: 100%; /* Spans seamlessly across the entire Notion column container */
-            box-sizing: border-box;
-            text-align: center;
-            border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle definition border instead of a shadow */
+
+        .large-comma {
+            font-size: 60px;
+            font-family: Georgia, serif;
+            font-weight: 800;
+            line-height: 0.5;
+            color: #b07a52; /* Accent color */
         }
-        /* Flat Inner Matte Paper */
-        .inner-matte {
-            background-color: #f6f1ec; /* Clean gallery off-white paper */
-            border-radius: 6px;
-            padding: 20px 14px;
-        }
-        .quote-text {
-            color: #2e2e2e; /* Dark print ink */
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 1.5;
-            margin: 0 0 14px 0;
+
+        .text-body {
+            font-size: 22px;
+            font-weight: 400;
             font-style: italic;
+            margin-left: 20px; /* Slight right-indent as requested */
+            margin-top: 10px;
+            margin-bottom: 10px;
+            line-height: 1.4;
         }
-        .quote-author {
-            color: #8a8580;
-            font-size: 12px;
-            font-weight: 700;
+
+        .author {
+            margin-top: 15px;
+            margin-left: 25px;
+            font-size: 10px;
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 0.2em;
+            color: #8a7a72;
         }
     </style>
 </head>
 <body>
 
-<div class="outer-frame">
-    <div class="inner-matte">
-        <p class="quote-text">"I train like I've never won, and I compete like I've never lost."</p>
-        <div class="quote-author">— Eileen Gu</div>
+<div class="quote-container">
+    <div class="large-comma">“</div>
+    <div class="text-body">
+        I train like I've never won, and I compete like I've never lost.
     </div>
+    <div class="large-comma" style="transform: rotate(180deg); margin-left: auto; width: fit-content;">“</div>
+    <div class="author">— Eileen Gu</div>
 </div>
 
 </body>
